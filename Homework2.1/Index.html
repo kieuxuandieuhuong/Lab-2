@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buttons</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        .instrument-button {
+            width: 120px;
+            height: 120px;
+            margin: 10px;
+            cursor: pointer;
+            border: none;
+            background: transparent;
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .instrument-button:hover {
+            transform: scale(1.1);
+        }
+
+        .instrument-button img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 8px; /* Optional: Add border-radius for rounded corners */
+        }
+
+        .instrument-label {
+            margin-top: 5px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Press the music Buttons</h1>
+    <button class="instrument-button" id="button1" onclick="playSound('button1')">
+        <img src="./Image/icons8-guitar-94.png" alt="Guitar">
+        <div class="instrument-label">Press 'G'</div>
+    </button>
+    <button class="instrument-button" id="button2" onclick="playSound('button2')">
+        <img src="./Image/icons8-piano-94.png" alt="Piano">
+        <div class="instrument-label">Press 'P'</div>
+    </button>
+    <button class="instrument-button" id="button3" onclick="playSound('button3')">
+        <img src="./Image/icons8-snare-drum-94.png" alt="Drums">
+        <div class="instrument-label">Press 'D'</div>
+    </button>
+
+    <script>
+        // Function to play sound based on button ID
+        function playSound(buttonId) {
+            switch (buttonId) {
+                case 'button1':
+                    playAudio('./Image/guitar.wav');
+                    break;
+                case 'button2':
+                    playAudio('./Image/piano.wav');
+                    break;
+                case 'button3':
+                    playAudio('./Image/drum.wav');
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        // Function to play audio
+        function playAudio(soundFile) {
+            const audio = new Audio(soundFile);
+            audio.play();
+        }
+
+        // Event listeners for keypress events
+        document.addEventListener('keypress', function (event) {
+            switch (event.key.toLowerCase()) {
+                case 'g':
+                    playSound('button1');
+                    break;
+                case 'p':
+                    playSound('button2');
+                    break;
+                case 'd':
+                    playSound('button3');
+                    break;
+                default:
+                    break;
+            }
+        });
+    </script>
+</body>
+</html>

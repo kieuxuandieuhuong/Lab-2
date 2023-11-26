@@ -1,0 +1,30 @@
+/* styles.css */
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: url('../R.jpg') center/cover no-repeat;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.countdown-container {
+    text-align: center;
+}
+
+.title {
+    font-family: 'Lobster', cursive;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.countdown {
+    font-size: 5em; /* Adjust the font size as needed */
+    font-weight: bold;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+}

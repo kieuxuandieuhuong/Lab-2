@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Highlight Link on Hover</title>
+  <style>
+    .highlight {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+<p id="textToHighlight">Đây là một đoạn văn có <span class="highlight">đường link</span> trong đó.</p>
+<a href="#" id="highlightLink" onmouseover="highlightLink()" onmouseout="removeHighlight()">Di chuột vào link này</a>
+
+<script>
+function highlightLink() {
+  var link = document.getElementById("highlightLink");
+  link.classList.add("highlight");
+}
+
+function removeHighlight() {
+  var link = document.getElementById("highlightLink");
+  link.classList.remove("highlight");
+}
+</script>
+
+</body>
+</html>

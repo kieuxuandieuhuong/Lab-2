@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content ="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PORTFOLIO</title>
+  <link rel="stylesheet" href ="style.css">
+</head>  
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="./Image/Logo.png" class ="logo">
+                <ul><li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>UI/UX Designer</p>
+                <h1>Hi, I'm <span> Dieu Huong</span> <br> From Viet Nam  </h1>
+                <a href="https://github.com/kieuxuandieuhuong">
+                    <img src="./Image/github.jpg" alt ="Github" title="Github" width="50px" height="50px">
+                </a>
+                <a href="https://www.linkedin.com/in/h%C6%B0%C6%A1ng-ki%E1%BB%81u-xu%C3%A2n-di%E1%BB%87u-3488b1270/">
+                    <img src="./Image/linkedin.png" alt ="Linkedin" title="Linkedin" width="50px" height="50px">
+                </a>
+            </div>
+        </div>
+    </div>
+    /*------------Aboutme--------------*/
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class ="about-col-1">
+                    <img src ="./Image/gentleman (17).png">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About me</h1>
+
+                    <p>I am a final-year student at Ho Chi Minh City University of Information Technology. My profound <span>passion lies in the field of UI/UX,</span> which has driven me to pursue the dream of becoming a skilled designer in this domain. 
+                    <br> <br>I consider myself a <span>cooperative</span> individual with the ability to perform <span>effectively under pressure. Enthusiasm </span>and <span>creativity</span> always accompany me throughout my UI/UX design endeavors. I constantly <span>set clear goals</span> and<span> dedicate</span> myself to achieving them.  Moreover, I actively seek opportunities to learn and stay updated with the latest trends and techniques.
+                    <br> <br>I firmly believe that my passion and perseverance will lead me to achieve great accomplishments in the UI/UX design industry. My aim is to create the best user experiences and contribute to the future advancement of information technology.</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('Skills')"> Skills</p>
+                        <p class="tab-links" onclick="opentab('Experience')"> Experience</p>
+                        <p class="tab-links" onclick="opentab('Education')"> Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="Skills">
+                        <ul>
+                            <li>UI/UX  <br><br>
+                                <span>Designing Web </span>
+                                <span>App Interfaces</span>
+                                <span> User Experience </span>
+                                <span>Wireframing</span>
+                                <span>Rapid Prototyping</span>
+                                <span>Design Research</span>
+                                <span> UX Research</span>
+                            </li>
+                            <li>Web Development <br><br>
+                                <span> HTML </span>
+                                <span>CSS</span>
+                                <span>Reactjs </span> </li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="Experience">
+                    <ul>
+                        <li> A BIG BITE App/Website <p>July/2023 - Oct/2023</p><br><br>
+                            <span>UI Designer</span>
+                            <span>UX Research</span>
+                            <span>Visual Designer</span>
+                            <span>UX UI Motion Designer</span>
+                        </li>
+                        <li> Clothing Shop Website <p>Mar/2023 - May/2023</p><br><br>
+                            <span>UI Designer</span>
+                            <span>UX Research</span>
+                        </li>
+                        <li>Order Room Website <p>Nov/2022 - Dec/2022</p> <br><br>
+                            <span>UI Designer</span>
+                            <span>CSS/HTML</span>
+                        </li>
+                    </ul>
+                    </div>
+                    <div class="tab-contents" id="Education">
+                        <ul>
+                            <li>Google UX Design Certificate
+                                <p>OCt 1,2023  <p></li>
+                            <li>VNU-HCM University of Information technology (UIT) <p>2020 - 2024 </p><br>
+                                <p>Undergraduate programs: Information Technology | GPA: 3.5/4.0 </p>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    ------------portfolio--------------
+    <div id ="portfolio">
+        <div class="container">
+            <h1 class="sub-title"> My work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="./Image/gentleman (19).png" >
+                    <div class="layer">
+                        <h3>Redesign UNI app</h3>
+                        <p> The convenient app for whom busy with their daily work</p>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="./Image/(1).png" >
+                    <div class="layer">
+                        <h3>Fast Food App</h3>
+                        <p> The convenient app for whom busy with their daily work</p>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="./Image/(2).png" >
+                    <div class="layer">
+                        <h3>Shopping Online For Man</h3>
+                        <p> The convenient app for whom busy with their daily work</p>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="./Image/(3).png" >
+                    <div class="layer">
+                        <h3>Booking Hotel Website</h3>
+                        <p> The convenient app for whom busy with their daily work</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button id="scrollToTopBtn" onclick="scrollToTop()"><img src="./Image/icons8-up-64.png" ></button>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        var tablinks = document.getElementsByClassName("tab-links");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        };
+        document.querySelectorAll('a[href ="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        function scrollToTop() {
+            document.body.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Show/Hide the Scroll to Top button based on scroll position
+        window.onscroll = function() {
+            var btn = document.getElementById('scrollToTopBtn');
+
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                btn.style.display = 'block';
+            } else {
+                btn.style.display = 'none';
+            }
+        };
+    </script>
+</body>
+</html>

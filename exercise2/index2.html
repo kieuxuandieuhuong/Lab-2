@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise 2</title>
+</head>
+<body>
+
+<form id="myForm">
+  <label for="textInput">Enter some text:</label>
+  <input type="text" id="textInput" />
+  <button type="submit" onclick="getSubmitButtonValue()">Submit</button>
+</form>
+
+<script>
+function getSubmitButtonValue() {
+  var textInput = document.getElementById("textInput");
+  alert("Entered text: " + textInput.value);
+  event.preventDefault(); // Prevent the form from submitting
+}
+</script>
+
+</body>
+</html>

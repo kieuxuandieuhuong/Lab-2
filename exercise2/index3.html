@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise 3</title>
+</head>
+<body>
+
+<form id="ageCalculatorForm">
+  <label for="name">Enter your name:</label>
+  <input type="text" id="name" placeholder="Your Name" />
+  <br>
+  <label for="birthYear">Enter birth year:</label>
+  <input type="text" id="birthYear" placeholder="YYYY" />
+  <button type="button" onclick="calculateAge()">Calculate Age</button>
+</form>
+
+<script>
+function calculateAge() {
+  var nameInput = document.getElementById("name");
+  var birthYearInput = document.getElementById("birthYear");
+
+  var name = nameInput.value.trim();
+  var birthYear = parseInt(birthYearInput.value);
+
+  if (name === "") {
+    alert("Please enter your name.");
+    return;
+  }
+
+  if (isNaN(birthYear)) {
+    alert("Please enter a valid birth year.");
+    return;
+  }
+
+  var currentYear = new Date().getFullYear();
+  var age = currentYear - birthYear;
+
+  alert(`Hello, ${name}! Your calculated age is: ${age}`);
+}
+</script>
+
+</body>
+</html>

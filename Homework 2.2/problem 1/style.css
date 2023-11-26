@@ -1,0 +1,46 @@
+/* Add your CSS styles here */
+*{
+    margin: 10;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-color: #f6f6f6;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Add any additional styles as needed */
+.box{
+    float:left;
+    background-color: #94cfff;
+    color: #ffff;
+    width: 90px;
+    line-height: 90px;
+    text-align: center;
+    margin: 5px;
+    display: none;
+    border-radius: 10px;
+}
+
+.show{
+    display: block;
+}
+
+.btn{
+  border: none;  
+  outline: none;
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  background-color: #e4b2b2;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.btn:hover{
+    background-color: #c43434;
+}
